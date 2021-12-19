@@ -7,6 +7,11 @@ function App() {
     <div className="app">
       {/* <h1>lets build linkedin clone</h1> */}
       <Header />
+
+  {/*App Body
+      Sidebar
+      Feed
+      Widgets */}
     </div>
   );
 }
