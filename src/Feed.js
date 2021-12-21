@@ -8,13 +8,13 @@ import EventNoteIcon from "@material-ui/icons/EventNote";
 import CalendarViewDayIcon from "@material-ui/icons/CalendarViewDay";
 import Post from './Post';
 import { db } from './firebase';
-// import firebase from './firebase';
+// import firebase from 'firebase';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 function Feed() {
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState("");
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -27,16 +27,18 @@ function Feed() {
         );
     }, []);
 
-    const sendPost = e => {
+    const sendPost = (e) => {
         e.preventDefault();
 
-        db.collection('posts').add({
-            name: 'Prakash Das',
-            description: 'this is a test of db collection',
+        db.collection("posts").add({
+            name: "Prakash Das",
+            description: "this is a test of db collection",
             message: input,
-            photoUrl: '',
-            timestamp: firebase.firestore.fieldValue.serverTimestamp(),
-        })
+            photoUrl: "",
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        });
+
+        setInput("");
     };
 
 
@@ -58,13 +60,28 @@ function Feed() {
                     <InputOption Icon={CalendarViewDayIcon} title="write article" color="#7FC15E" />
                 </div>
             </div>
+
             {/* Post */}
-            {posts.map((post) => {
+            {/* {posts.map((post) => {
                 <Post />
-            })}
-            <Post name='Prakshh' description='this is a test' message='wow, this worked' />
+            })} */}
+
+            {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+                <Post
+                    key={id}
+                    name={name}
+                    description={description}
+                    message={message}
+                    photoUrl={photoUrl} 
+                />
+            ))}
+            
+            {/* <Post 
+                name='Prakshh' description='this is a test' message='wow, this worked' 
+            /> */}
+
         </div>
-    )
+    );
 }
 
 export default Feed
