@@ -41,9 +41,8 @@ function Header() {
                 <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
                 <HeaderOption Icon={ChatIcon} title="Messaging" />
                 <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-                <HeaderOption avatar="./assets/images/linkedin-avatar.jpeg" title="me" />
+                <HeaderOption avatar="./assets/images/linkedin-avatar.jpeg" title="me" onClick={logoutOfApp}/>
                 {/* <HeaderOption Icon={AccountCircleIcon} title="me" /> */}
-                onClick={logoutOfApp}
             </div>
 
         </div>
