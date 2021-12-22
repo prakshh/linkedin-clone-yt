@@ -12,20 +12,17 @@ export const userSlice = createSlice({
   },
 
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    login: (state, action) => {
+      state.value = action.payload;
     },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    logout: (state) => {
+      state.user = null;
     },
   },
 });
 
-export const { increment, decrement, incrementByAmount } = userSlice.actions;
+export const { login, logout } = userSlice.actions;
 
-export const selectUser = (state) => state.user.value; // to pull from data layer 
+export const selectUser = (state) => state.user.value; // selectors - to pull from data layer 
 
 export default userSlice.reducer;
