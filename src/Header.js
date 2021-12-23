@@ -46,7 +46,7 @@ function Header() {
                     // avatar="./assets/images/linkedin-avatar.jpeg"
                     // avatar={user.photoUrl} 
                     avatar={true}
-                    title="me" 
+                    title="Me" 
                     onClick={logoutOfApp}/>
                 {/* <HeaderOption Icon={AccountCircleIcon} title="me" /> */}
             </div>

@@ -24,10 +24,10 @@ function Widgets() {
                 <InfoIcon />
             </div>
             {newsArticle("SpaceX is back", "Top news : 9099 readers")}
-            {newsArticle("Solar Planet: UK updates", "Top news - 886 reader")}
-            {newsArticle("Bitcoin Breaks $22K", "Crypto - 8000 reader")}
-            {newsArticle("Google Workspace Emerges", "Get Ready - 120000 reader")}
-            {newsArticle("Tesla hits new highs", "Cars & auto - 300 reader")}           
+            {newsArticle("Solar Planet: UK updates", "Top news - 886 readers")}
+            {newsArticle("Bitcoin Breaks $22K", "Crypto - 8000 readers")}
+            {newsArticle("Google Workspace Emerges", "Get Ready - 120000 readers")}
+            {newsArticle("Tesla hits new highs", "Cars & auto - 300 readers")}           
         </div>
     )
 }
