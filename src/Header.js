@@ -9,11 +9,12 @@ import ChatIcon from '@material-ui/icons/Chat'
 import NotificationsIcon from '@material-ui/icons/Notifications'
 // import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 // import AccountCircleIcon from '@material-ui/icons/AccountCircle'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { auth } from './firebase';
-import { logout } from './features/userSlice';
+import { logout, selectUser } from './features/userSlice';
 
 function Header() {
+    // const user = useSelector(selectUser);
     const dispatch = useDispatch();
 
     const logoutOfApp = () => {
@@ -41,7 +42,12 @@ function Header() {
                 <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
                 <HeaderOption Icon={ChatIcon} title="Messaging" />
                 <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-                <HeaderOption avatar="./assets/images/linkedin-avatar.jpeg" title="me" onClick={logoutOfApp}/>
+                <HeaderOption 
+                    // avatar="./assets/images/linkedin-avatar.jpeg"
+                    // avatar={user.photoUrl} 
+                    avatar={true}
+                    title="me" 
+                    onClick={logoutOfApp}/>
                 {/* <HeaderOption Icon={AccountCircleIcon} title="me" /> */}
             </div>
 

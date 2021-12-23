@@ -24,6 +24,7 @@ export const userSlice = createSlice({
 
 export const { login, logout } = userSlice.actions;
 
-export const selectUser = (state) => state.user.value; // selectors - to pull from data layer 
+export const selectUser = (state) => state.user.value; 
+//state.user.value; // selectors - to pull from data layer 
 
 export default userSlice.reducer;
