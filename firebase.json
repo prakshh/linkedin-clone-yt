@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "build/linkedin-clone-yt-b7ef9",
+    "public": "build/linkedin-clone-yt",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -12,5 +12,8 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "database": {
+    "rules": "database.rules.json"
   }
 }
