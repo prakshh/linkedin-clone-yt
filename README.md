@@ -1,6 +1,7 @@
 # Linkedin Clone 
 
-(client/images/public/assets/images/Screenshot-from-2022-01-10-18-20-25.png)
+![Linkedin1](client/images/public/assets/images/Screenshot-from-2022-01-10-18-20-25.png)
+![Linkedin2](client/images/public/assets/images/Screenshot-from-2022-01-10-18-26-17.png)
 
 ## Introduction
 This is a code repository of the responsive UI clone of LinkedIn built with React, Redux, Firebase realtime database and authentication
