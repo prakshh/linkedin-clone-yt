@@ -19,6 +19,7 @@ function Sidebar() {
             <div className="sidebar__top">
                 <img src="./assets/images/coverpic.jpg" alt="" />
                 <Avatar src={user.photoUrl} className="sidebar__avatar">{user.email[0]}</Avatar>
+                {/* <Avatar src={photoUrl} className="sidebar__avatar">{name[0]}</Avatar> */}
                 <h2>{user.displayName}</h2>
                 <h4>{user.email}</h4>
             </div>
